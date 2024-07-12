@@ -1,0 +1,20 @@
+{
+  "network": {
+    "isAbstract":"yes",
+    "key": ["network-id"],
+    "properties":{
+      "network-id":{
+        "Description":"RFC8345 network-id: Identifies a network",
+        "Type":""
+      },
+      "network-types":{
+        "Description":"RFC8345 network-types. RFC8944 defines l2-topology for L2",
+        "Type":""
+      },
+      "supporting-network": {
+        "Description":"RFC8345 supporting network-id",
+        "Type":"list"
+      }
+    }
+  }
+}

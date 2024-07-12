@@ -1,0 +1,20 @@
+{
+  "node": {
+    "isAbstract":"yes",
+    "key": ["node-id"],
+    "properties": {
+      "node-id": {
+        "Description": "RFC8345 node_id: Uniquely identifies a node within the containing network",
+        "Type": ""
+      },
+      "network-id": {
+        "Description": "RFC8345 network_id",
+        "Type": ""
+      },
+      "supporting-node": {
+        "Description": "RFC8345 supporting node",
+        "Type": "list"
+      }
+    }
+  }
+}

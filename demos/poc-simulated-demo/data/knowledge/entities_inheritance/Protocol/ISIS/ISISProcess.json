@@ -1,0 +1,17 @@
+{
+    "ISISProcess": {
+      "layer": "Protocol",
+      "sublayer": "ISIS",
+      "parent": "isis-topology-node",
+      "properties": {
+        "ne-node-id": {
+          "Description": "NE node-id",
+          "Type": ""
+        },
+        "label": {
+          "Description": "ISIS Node Label",
+          "Type": ""
+        }
+      }
+    }
+}

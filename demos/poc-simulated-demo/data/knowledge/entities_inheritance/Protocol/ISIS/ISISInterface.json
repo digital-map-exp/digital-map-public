@@ -1,0 +1,34 @@
+{
+    "ISISInterface": {
+      "layer": "Protocol",
+      "sublayer": "ISIS",
+      "parent": "isis-topology-termination-point",
+      "properties": {
+        "circuit-id": {
+          "Description": "Peer circuit id",
+          "Type": ""
+        },
+        "system-id": {
+          "Description": "ISIS Process system-id",
+          "Type": ""
+        },
+        "nbr-system-id": {
+          "Description": "Neighbor ISIS process system-id",
+          "Type": ""
+        },
+        "ne-node-id": {
+          "Description": "NE node-id",
+          "Type": ""
+        },
+        "nbr-ne-node-id": {
+          "Description": "Neighbor NE node-id",
+          "Type": ""
+        },
+        "label": {
+          "Description": "ISIS Interface Label",
+          "Type": ""
+        }
+      }
+    }
+}
+

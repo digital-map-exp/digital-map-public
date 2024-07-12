@@ -1,0 +1,16 @@
+{
+  "l3-unicast-topology-network": {
+    "isAbstract":"yes",
+    "parent": "network",
+    "properties":{
+      "l3-topology-attributes.name":{
+        "Description":"Based on RFC8346 name: Name of the topology",
+        "Type":""
+      },
+      "l3-topology-attributes.flag":{
+        "Description":"Based on RFC8346 flag: Topology Flags",
+        "Type":"list"
+      }
+    }
+  }
+}

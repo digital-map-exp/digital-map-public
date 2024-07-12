@@ -1,0 +1,24 @@
+{
+  "l3-unicast-topology-link": {
+    "isAbstract": "yes",
+    "parent":"link",
+    "properties": {
+      "l3-link-attributes.name": {
+        "Description": "RFC8346 name. Link name",
+        "Type": ""
+      },
+      "l3-link-attributes.flag": {
+        "Description": "RFC8346 flag: Link flags",
+        "Type": "list"
+      },
+       "l3-link-attributes.metric1": {
+        "Description": "RFC8346 metric1: Link Metric 1",
+        "Type": ""
+      },
+       "l3-link-attributes.metric2": {
+        "Description": "RFC8346 metric2: Link Metric 2",
+        "Type": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+[
+    {
+        "src_entity": "ISISArea",
+        "src_entity_attr": "network-id",
+        "dst_entity": "ISISProcess",
+        "dst_entity_attr": "network-id",
+        "correlation_logic": "Equal",
+        "type": "contains",
+        "properties": "",
+        "show_name": "ISIS Area contains ISIS Processes",
+        "description": "RFC8345 containment relationship between network and contained node"
+    },
+    {
+        "src_entity": "ISISArea",
+        "src_entity_attr": "supporting-network-id",
+        "dst_entity": "Network",
+        "dst_entity_attr": "network-id",
+        "correlation_logic": "Equal",
+        "type": "supporting",
+        "properties": "",
+        "show_name": "Supporting network for ISIS Area",
+        "description": "RFC8345 supporting-network , network-ref"
+    },
+    {
+        "src_entity": "ISISProcess",
+        "src_entity_attr": "node-id",
+        "dst_entity": "ISISInterface",
+        "dst_entity_attr": "node-id",
+        "correlation_logic": "Equal",
+        "type": "contains",
+        "properties": "",
+        "show_name": "ISIS Process contains ISIS Interfaces",
+        "description": "RFC8345 containment relationship between node and contained tps"
+    },
+    {
+        "src_entity": "ISISProcess",
+        "src_entity_attr": "ne-node-id",
+        "dst_entity": "NE",
+        "dst_entity_attr": "node-id",
+        "correlation_logic": "Equal",
+        "type": "supporting",
+        "properties": "",
+        "show_name": "Supporting node for ISIS Process",
+        "description": "RFC8345 supporting-node , node-ref"
+    },
+    {
+        "src_entity": "ISISInterface",
+        "src_entity_attr": "ne-node-id & interface-name",
+        "dst_entity": "Interface",
+        "dst_entity_attr": "node-id & tp-id",
+        "correlation_logic": "Equal",
+        "type": "supporting",
+        "properties": "",
+        "show_name": "Supporting interface for ISIS Interface",
+        "description": "RFC8345 supporting-tp, tp-ref"
+    },
+    {
+        "src_entity": "ISISInterface",
+        "src_entity_attr": "ne-node-id & interface-name",
+        "dst_entity": "Loopback",
+        "dst_entity_attr": "node-id & tp-id",
+        "correlation_logic": "Equal",
+        "type": "supporting",
+        "properties": "",
+        "show_name": "Supporting loopback interface for ISIS Interface",
+        "description": "RFC8345 supporting-tp, tp-ref"
+    },
+    {
+        "src_entity": "ISISArea",
+        "src_entity_attr": "network-id",
+        "dst_entity": "ISISLink",
+        "dst_entity_attr": "network-id",
+        "correlation_logic": "Equal",
+        "type": "contains",
+        "properties": "",
+        "show_name": "ISIS Area contains ISIS Link",
+        "description": "RFC8345 containment relationship between network and contained link"
+    },
+    {
+        "src_entity": "ISISLink",
+        "src_entity_attr": "source.source-node & source.source-tp",
+        "dst_entity": "ISISInterface",
+        "dst_entity_attr": "node-id & tp-id",
+        "correlation_logic": "Equal",
+        "type": "source",
+        "properties": "",
+        "show_name": "Source Interface of the ISISLink",
+        "description": "RFC8345 source relationship between link and tp"
+    },
+    {
+        "src_entity": "ISISLink",
+        "src_entity_attr": "destination.dest-node & destination.dest-tp",
+        "dst_entity": "ISISInterface",
+        "dst_entity_attr": "node-id & tp-id",
+        "correlation_logic": "Equal",
+        "type": "dest",
+        "properties": "",
+        "show_name": "Destination Interface of the ISISLink",
+        "description": "RFC8345 dest relationship between link and tp"
+    },
+    {
+        "src_entity": "ISISLink",
+        "src_entity_attr": "source-ne-node & source.source-tp & dest-ne-node & destination.dest-tp",
+        "dst_entity": "L2Link",
+        "dst_entity_attr": "source-node & source-tp & dest-node & dest-tp",
+        "correlation_logic": "Equal",
+        "type": "supporting",
+        "properties": "",
+        "show_name": "Supporting interface for ISIS Interface",
+        "description": "RFC8345 supporting-tp, tp-ref"
+    }
+]

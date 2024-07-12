@@ -1,0 +1,36 @@
+{
+    "link": {
+      "isAbstract":"yes",
+      "key": ["link-id"],
+      "properties": {
+        "link-id": {
+          "Description": "RFC8345 link-id",
+          "Type": ""
+        },
+        "network-id": {
+          "Description": "RFC8345 network-id",
+          "Type": ""
+        },
+        "source.source-node": {
+          "Description": "RFC8345 source, source-node",
+          "Type": ""
+        },
+        "source.source-tp": {
+          "Description": "RFC8345 source, source-tp",
+          "Type": ""
+        },
+        "destination.dest-node": {
+          "Description": "RFC8345 destination, dest-node",
+          "Type": ""
+        },
+        "destination.dest-tp": {
+          "Description": "RFC8345 destination, dest-tp",
+          "Type": ""
+        },
+      "supporting-link": {
+        "Description": "RFC8345 supporting link",
+        "Type": "list"
+      }
+      }
+    }
+}

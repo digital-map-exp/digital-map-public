@@ -1,0 +1,29 @@
+{
+    "ISISLink": {
+      "layer": "Protocol",
+      "sublayer": "ISIS",
+      "parent": "isis-topology-link",
+      "properties": {
+        "source-ne-node": {
+          "Description": "Source NE ID",
+          "Type": ""
+        },
+        "dest-ne-node": {
+          "Description": "Dest NE ID",
+          "Type": ""
+        },
+        "source-system-id": {
+          "Description": "Source System ID",
+          "Type": ""
+        },
+        "dest-system-id": {
+          "Description": "Dest System ID",
+          "Type": ""
+        },
+        "label": {
+          "Description": "ISIS Link label",
+          "Type": ""
+        }
+      }
+    }
+}

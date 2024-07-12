@@ -1,0 +1,15 @@
+{
+    "devices": [
+        {
+            "category": "router",
+            "sys_vendor": "huawei",
+            "sys_type": "NE8000",
+            "software_version": "V800R021C12",
+            "host": "1.1.1.1",
+            "port": "22",
+            "username": "username",
+            "password": "password",
+            "device_handler": "huaweiyang"
+        }
+    ]
+}

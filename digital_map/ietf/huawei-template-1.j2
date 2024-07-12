@@ -1,0 +1,190 @@
+{
+    "ietf-network:networks": {
+        "network": [ {%- for netw in network_props %}
+            {
+                "network-id": "{{netw['network-id']}}",
+                "network-types": {
+                    {%- set list1 = netw['network-types'].split(',') %}
+                    {%- for list in list1 %}
+                    "{{list }}"
+                    {%- if not loop.last %},
+                    {%- endif %}
+                    {%- endfor %}
+                },
+                "supporting-network": [
+                    {
+                        "network-ref": "{{netw['supporting-network']}}"
+                    }
+                ],
+            	"node" : [
+            	{%- set list_node_filtered=[] %}
+            	{%- for node in node_props %}
+            	{%- if node['network-id'] == netw['network-id'] %}
+            	{%- set list_node_filtered = list_node_filtered.append(node) %}
+            	{%- endif %}
+            	{%- endfor %}
+		        {%- for node in list_node_filtered %}
+		        {%- set ns = namespace(isisnodeattribpresent = 'false') %}
+		        {%- set ns = namespace(isistimerattribpresent = 'false') %}
+			    {%- set ns = namespace(isistermpointattrpresent = 'false') %}
+                {%- if node['network-id'] == netw['network-id'] %}
+				    {
+				    {%- for node_elem in node %}
+				    {%- if node_elem.split('.')[0] == "isis-node-attributes" %}
+				    {%- set ns.isisnodeattribpresent = 'true' %}
+				    {%- endif%}
+				    {%- if node_elem.split('.')[0] == "isis-timer-attributes" %}
+				    {%- set ns.isistimerattribpresent = 'true' %}
+				    {%- endif%}
+				    {%- if node_elem.split('.')[0] == "isis-termination-point-attributes" %}
+				    {%- set ns.isistermpointattrpresent = 'true' %}
+				    {%- endif%}
+				    {%- if node_elem.split('.')[0] == " isis-link-attributess" %}
+				    {%- set ns.isislinkattrpresent = 'true' %}
+				    {%- endif%}
+				    {%- endfor %}
+				        "node-id": "{{node['node-id']}}",
+				        "supporting-node": [
+				            {
+				                "node-ref": "{{node['supporting-node']}}",
+				                "network-ref" :  "{{netw['supporting-network']}}"
+				            }
+				        ],
+				        "ietf-network-topology:termination-point":[
+				        {%- set list_tp_filtered=[] %}
+				        {%- for tp in tp_props %}
+				        {%- if node['node-id'] == tp['node-id'] %}
+				        {%- set list_tp_filtered = list_tp_filtered.append(tp) %}
+				        {%- endif %}
+				        {%- endfor %}
+				        {%- for tp in list_tp_filtered %}
+						{%- if node['node-id'] == tp['node-id'] %}
+						    {
+						{%- for tp_elem in tp %}
+                        {%- if tp_elem.split('.')[0] == "isis-termination-point-attributes" %}
+					    {%- set ns.isistermpointattrpresent = 'true' %}
+					    {%- endif%}
+					    {%- endfor %}
+						        "tp-id": "{{tp['tp-id']}}",
+						        "supporting-termination-point": {
+						            "network-ref": "{{netw['supporting-network']}}",
+						            "node-ref": "{{node['supporting-node']}}",
+						            "tp-ref": "{{tp['supporting-termination-point']}}"
+						        },
+						        "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+						            "ip-address": "{{tp['l3-termination-point-attributes.ip-address']}}",
+						            "unnumbered-id": "{{tp['l3-termination-point-attributes.unnumbered-id']}}",
+						            "interface-name": "{{tp['l3-termination-point-attributes.interface-name']}}",
+						            {%- if ns.isistermpointattrpresent == 'true' %}
+							        "ietf-l3-isis-topology:isis-termination-point-attributes": [
+							            {
+							                "interface-type": "{{tp['isis-termination-point-attributes.interface-type']}}",
+							                "level": "{{tp['isis-termination-point-attributes.level']}}",
+							                "is-passive": "{{tp['isis-termination-point-attributes.is-passive']}}"
+							            }
+							        ]
+						            {%- endif%}
+						        }
+				            }
+				        {%- if not loop.last %},
+				        {%- endif %}
+					    {%- endif %}
+					    {%- endfor %}
+			            ],
+			            "ietf-l3-unicast-topology:l3-node-attributes":[
+				            {
+				                "name": "{{node['l3-node-attributes.name']}}",
+				                "flag": "{{node['l3-node-attributes.flag']}}",
+				                "router-id": "{{node['l3-node-attributes.router-id']}}",
+				                "prefix": {
+				                    "prefix" : "TBD",
+				                    "metric" : "TBD",
+				                    "flag": "{{node['l3-node-attributes.flag']}}"
+				                },
+				                {%- if ns.isisnodeattribpresent == 'true' %}
+					            "ietf-l3-isis-topology:isis-node-attributes":  {
+					                "system-id" : "{{node['isis-node-attributes.system-id']}}",
+					                "level" : "{{node['isis-node-attributes.level']}}",
+					                "area-address":  "{{node['isis-node-attributes.area-address']}}",
+					                "lsp-lifetime" : "{{node['isis-node-attributes.lsp-lifetime']}}",
+					                "lsp-refresh-interval":  "{{node['isis-node-attributes.lsp-refresh-interval']}}"
+					            },
+				                {%- endif%}
+				                {%- if ns.isistimerattribpresent == 'true' %}
+					            "ietf-l3-isis-topology:isis-timer-attributes": {
+						            "lsp-mtu": "{{node['isis-timer-attributes.lsp-mtu']}}",
+						            "lsp-lifetime": "{{node['isis-timer-attributes.lsp-lifetime']}}",
+						            "lsp-refresh-interval": "{{node['isis-timer-attributes.lsp-refresh-interval']}}",
+						            "poi-ltv": "{{node['isis-timer-attributes.poi-ltv']}}"
+						        }
+				                {%- endif%}
+				            }
+			            ]
+			        }
+				    {%- if not loop.last %},
+				    {%- endif %}
+				    {%- endif %}
+		            {%- endfor %}
+                ],
+                "ietf-network-topology:link": [
+                {%- set list_link_filtered=[] %}
+    			{%- for link in link_props %}
+    			{%- if netw['network-id'] == link['network-id'] %}
+    			{%- set list_link_filtered = list_link_filtered.append(link) %}
+    			{%- endif %}
+    			{%- endfor %}
+                {%- set ns = namespace(isislinkattrpresent = 'false') %}
+                {%- for link in list_link_filtered %}
+                {%- if netw['network-id'] == link['network-id'] %}
+	            {%- for link_elem in link %}
+	            {%- if link_elem.split('.')[0] == "isis-link-attributes" %}
+	            {%- set ns.isislinkattrpresent = 'true' %}
+	            {%- endif%}
+	            {%- endfor %}
+	                {
+	                    "link-id": "{{link['link-id']}}",
+	                    "source": {
+	                        "source-node": "{{link['source.source-node']}}",
+	                        "source-tp": "{{link['source.source-tp']}}"
+	                    },
+	                    "destination": {
+	                        "dest-node": "{{link['destination.dest-node']}}",
+	                        "dest-tp": "{{link['destination.dest-tp']}}"
+	                    },
+	                    "supporting-link": {
+	                        "network-ref": "{{netw['supporting-network']}}",
+	                        "link-ref": "{{link['supporting-link']}}"
+	                    },
+	                    "ietf-l3-unicast-topology:l3-link-attributes":{
+	                        "name": "{{link['l3-link-attributes.name']}}",
+	                        "flag": "{{link['l3-link-attributes.flag']}}",
+	                        "metric1":"{{link['l3-link-attributes.metric1']}}",
+	                        "metric2": "{{link['l3-link-attributes.metric2']}}",
+	                        {%- if ns.isislinkattrpresent == 'true' %}
+	                        "ietf-l3-isis-topology:isis-link-attributes": {
+	                            "metric": "{{link['isis-link-attributes.metric']}}",
+	                            "level":  "{{link['isis-link-attributes.level']}}"
+	                        }
+	                        {%- endif%}
+	                    }
+	                }
+	                {%- if not loop.last %},
+	                {%- endif %}
+                	{%- endif %}
+                  {%- endfor%}
+                ],
+                "ietf-l3-unicast-topology:l3-topology-attributes": [
+                    {
+                        "name": "{{netw['l3-topology-attributes.name']}}",
+                        "flag": "{{netw['l3-topology-attributes.flag']}}"
+                    }
+                ]
+            }
+           {%- if not loop.last %},
+           {%- endif %}
+          {%- endfor %}
+      ]
+   }
+ }
+
+

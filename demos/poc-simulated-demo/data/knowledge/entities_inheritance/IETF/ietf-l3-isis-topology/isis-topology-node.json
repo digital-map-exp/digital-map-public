@@ -1,0 +1,44 @@
+{
+  "isis-topology-node": {
+    "isAbstract": "yes",
+    "parent":"l3-unicast-topology-node",
+    "properties": {
+      "isis-node-attributes.system-id": {
+        "Description": "System-id of the node.",
+        "Type": ""
+      },
+      "isis-node-attributes.level": {
+          "Description": "Level of an IS-IS node - can be level-1,level-2 or level-all.",
+          "Type": ""
+      },
+      "isis-node-attributes.area-address": {
+        "Description": "List of areas supported by the protocol instance",
+        "Type": "list"
+      },
+      "isis-node-attributes.lsp-lifetime": {
+        "Description": "Lifetime of the router's LSPs in seconds.",
+        "Type": ""
+      },
+      "isis-node-attributes.lsp-refresh-interval": {
+        "Description": "Refresh interval of the router's LSPs in seconds.",
+        "Type": ""
+      },
+      "isis-timer-attributes.lsp-mtu": {
+        "Description": "MTU of the router's LSPs.",
+        "Type": ""
+      },
+      "isis-timer-attributes.lsp-lifetime": {
+        "Description": "Lifetime of the router's LSPs in seconds.",
+        "Type": ""
+      },
+      "isis-timer-attributes.lsp-refresh-interval": {
+        "Description": "Refresh interval of the router's LSPs in seconds.",
+        "Type": ""
+      },
+      "isis-timer-attributes.poi-tlv": {
+        "Description": "POI TLV  of the router's LSPs.",
+        "Type": ""
+      }
+    }
+  }
+}

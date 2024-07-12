@@ -1,0 +1,44 @@
+Clean DB;
+MATCH (n) DETACH DELETE n
+
+L2 Topology:
+MATCH (m) where m.layer in ["l2-topology"] return m
+MATCH (n:`dm-l2-node`), (n1:`dm-l2-link`)-[r]->(n2:`dm-l2-interface`) return n,n1,n2,r
+
+Get all unmanaged devices:
+MATCH (ne:NE {network_id: 'Network:Dublin LAB'}) return ne
+
+Get all unmanaged devices:
+MATCH (ne:NE {network_id: 'Network:Dublin LAB Unmanaged'}) return ne
+
+
+Other options if needed
+MATCH (n1:NE),(n2:Network),(n3:Interface),(n4:L2Link) return n1,n2,n3,n4
+MATCH (n1:NE), ((n2:L2Link)-[r]->(n3:Interface)) return n1,n2,n3
+
+MATCH (m) where m.sublayer in ["L2","L2, L3"] return m
+match (a) where(a.sublayer contains 'L2') return a
+match (a) where(a.sublayer contains 'L3') return a
+MATCH (m) where m.layer="Network Topology" return m
+
+
+Get all relationship types
+MATCH (n)-[r]-(m) RETURN distinct type(r)
+
+MATCH (n)-[r]->(m) RETURN distinct labels(n), labels(m)
+
+
+OSPF:
+Get all OSPF areas, processes and links
+MATCH (p1:OSPFArea), (p2:OSPFProcess), (p3:OSPFLink) return p1, p2, p3
+Get all ospf
+match (a) where(a.sublayer contains 'OSPF') return a
+Get all ospf with underlay
+match (a)-[k:supporting]->(b) where(a.sublayer contains 'OSPF') return a, b
+
+ISIS:
+match (a) where(a.sublayer contains 'ISIS') return a
+Get all ISIS with underlay
+MATCH (n:ISISArea)-[r1:contains]-(m), (n)-[r2:supporting]-(k), (m)-[r3:supporting]-(l)  RETURN n,m,k,l
+match (a)-[k:supporting]->(b) where(a.sublayer contains 'ISIS') return a, b
+

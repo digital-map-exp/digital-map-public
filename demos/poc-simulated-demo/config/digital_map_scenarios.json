@@ -1,0 +1,23 @@
+{
+    "scenarios": [
+        {
+            "scenario": "generate_flat_entity_types"
+        },
+        {
+            "scenario": "generate_dm_entities"
+        },
+        {
+            "scenario": "generate_dm_aggregated_entities"
+        },
+        {
+            "scenario": "generate_dm_relations"
+        },
+        {
+            "scenario": "generate_db_entities"
+        },
+        {
+            "scenario": "generate_db_relations"
+        }
+    ]
+}
+

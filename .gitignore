@@ -1,0 +1,9 @@
+
+.idea/
+__pycache__/
+venv
+logfile.log
+results
+/data_generated
+/data
+/digital_map/aoc

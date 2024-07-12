@@ -1,0 +1,32 @@
+{
+    "l2-topology-link": {
+      "isAbstract":"yes",
+      "parent":"link",
+      "properties": {
+        "l2-link-attributes.name": {
+          "Description": "RFC8346 name: Link name",
+          "Type": ""
+        },
+        "l2-link-attributes.flags": {
+          "Description": "RFC8346 flags: Link flags",
+          "Type": "link"
+        },
+        "l2-link-attributes.rate": {
+          "Description": "RFC8346 flags: Link rate",
+          "Type": ""
+        },
+        "l2-link-attributes.delay": {
+          "Description": "RFC8346 flags: Link delay",
+          "Type": ""
+        },
+        "l2-link-attributes.auto-nego": {
+          "Description": "RFC8346 flags: Link auto-nego",
+          "Type": ""
+        },
+        "l2-link-attributes.duplex": {
+          "Description": "RFC8346 flags: Link duplex",
+          "Type": ""
+        }
+      }
+    }
+}

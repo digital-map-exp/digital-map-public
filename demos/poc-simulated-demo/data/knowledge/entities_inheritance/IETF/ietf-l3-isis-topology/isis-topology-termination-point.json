@@ -1,0 +1,20 @@
+{
+  "isis-topology-termination-point": {
+    "isAbstract": "yes",
+    "parent":"l3-unicast-topology-termination-point",
+    "properties": {
+      "isis-termination-point-attributes.interface-type": {
+        "Description": "Type of adjacency (broadcast or point-to-point) to be established for the interface.",
+        "Type": ""
+      },
+      "isis-termination-point-attributes.level": {
+          "Description": "Level of an IS-IS node - can be level-1,level-2 or level-all.",
+          "Type": ""
+      },
+      "isis-termination-point-attributes.is-passive": {
+        "Description": "Indicates whether the interface is in passive mode (IS-IS not running but network is advertised).",
+        "Type": "list"
+      }
+    }
+  }
+}

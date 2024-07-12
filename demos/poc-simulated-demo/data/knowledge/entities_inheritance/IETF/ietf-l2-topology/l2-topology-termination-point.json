@@ -1,0 +1,56 @@
+{
+  "l2-topology-termination-point": {
+    "isAbstract": "yes",
+    "parent": "termination-point",
+    "properties": {
+        "l2-termination-point-attributes.interface-name": {
+          "Description": "RFC8944 interface-name: Name of the interface",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.mac-address": {
+          "Description": "RFC8944 interface-name: Interface MAC address for LLC",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.port-number": {
+          "Description": "RFC8944 port-number list: List of port numbers",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.unnumbered-id": {
+          "Description": "RFC8944 unnumbered-id list: List of unnumbered interface identifiers",
+          "Type": "list"
+        },
+        "l2-termination-point-attributes.encapsulation-type": {
+          "Description": "RFC8944 encapsulation-type: Encapsulation type of this termination point",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.outer-tag": {
+          "Description": "RFC8944 outer-tag",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.outer-tpid": {
+          "Description": "RFC8944 outer-tpid",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.inner-tag": {
+          "Description": "RFC8944 inner-tag",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.inner-tpid": {
+          "Description": "RFC8944 inner-tpid",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.lag": {
+          "Description": "RFC8944 lag: Is lag supported ir not",
+          "Type": ""
+        },
+        "l2-termination-point-attributes.member-link-tp": {
+          "Description": "RFC8944 member-link-tp: Relevant only if LAG is supported, list of member link tps",
+          "Type": "list"
+        },
+        "l2-termination-point-attributes.vxlan.vni-id": {
+          "Description": "RFC8944 vxlan",
+          "Type": "list"
+        }
+    }
+  }
+}

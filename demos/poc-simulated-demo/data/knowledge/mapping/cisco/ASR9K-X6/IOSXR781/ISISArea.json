@@ -1,0 +1,9 @@
+{
+  "ISISArea": {
+    "Build_Mode": "netconf",
+    "Build_Method": "python",
+    "Input_External_Files": "openconfig-network-instance.json",
+    "Input_Internal_Files": "Network.json",
+    "Python_File": "ISISArea.py"
+  }
+}

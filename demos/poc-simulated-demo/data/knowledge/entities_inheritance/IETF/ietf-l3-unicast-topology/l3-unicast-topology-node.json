@@ -1,0 +1,24 @@
+{
+  "l3-unicast-topology-node": {
+    "isAbstract": "yes",
+    "parent":"node",
+    "properties": {
+      "l3-node-attributes.name": {
+        "Description": "RFC8346 name: Node name",
+        "Type": ""
+      },
+      "l3-node-attributes.flag": {
+        "Description": "RFC8346 flag list: Node flags",
+        "Type": "list"
+      },
+       "l3-node-attributes.router-id": {
+        "Description": "RFC8346 router-id: Router-id for the node",
+        "Type": "list"
+      },
+      "l3-node-attributes.prefix": {
+          "Description": "RFC8346 prefix: A list of prefixes along with their attributes",
+          "Type": "list"
+      }
+    }
+  }
+}

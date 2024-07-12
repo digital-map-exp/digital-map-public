@@ -1,0 +1,66 @@
+{
+    "ISISLink": {
+        "Build_Mode": "manual",
+        "Build_Method": "json",
+        "Properties": {
+            "link-id": {
+                "compute": "$['source.source-node'] + ':' + $['source.source-tp'] + '-' + $['destination.dest-node'] + ':' + $['destination.dest-tp']"
+            },
+            "network-id": {
+                "src_entity_attr": "network-id"
+            },
+            "source.source-node": {
+                "src_entity_attr": "node-id"
+            },
+            "source.source-tp": {
+                "src_entity_attr": "tp-id"
+            },
+            "destination.dest-node": {
+                "dst_entity_attr": "node-id"
+            },
+            "destination.dest-tp": {
+                "dst_entity_attr": "tp-id"
+            },
+            "l3-link-attributes.name": {
+                "compute":  "$['link-id'].replace('GigabitEthernet','GE')"
+            },
+            "l3-link-attributes.flag": {
+                "value": "isis"
+            },
+            "l3-link-attributes.metric1": {
+                "value": "TODO l3-link-attributes.metric1"
+            },
+            "l3-link-attributes.metric2": {
+                "value": "TODO l3-link-attributes.metric2"
+            },
+            "isis-link-attributes.level": {
+                "src_entity_attr": "isis-termination-point-attributes.level"
+            },
+            "isis-link-attributes.metric": {
+                "value": "TODO isis-link-attributes.metric"
+            },
+            "source-ne-node": {
+                "src_entity_attr": "ne-node-id"
+            },
+            "dest-ne-node": {
+                "dst_entity_attr": "ne-node-id"
+            },
+            "source-system-id": {
+                "src_entity_attr": "system-id"
+            },
+            "dest-system-id": {
+                "dst_entity_attr": "system-id"
+            },
+            "label": {
+                "compute": "$['source-system-id'].replace('0000.','') + ' - ' + $['dest-system-id'].replace('0000.','')"
+            }
+        },
+        "Rules": {
+            "src_entity": "ISISInterface",
+            "src_entity_attr": "nbr-system-id & circuit-id",
+            "dst_entity": "ISISInterface",
+            "dst_entity_attr": "system-id & circuit-id",
+            "correlation_logic": "Equal"
+        }
+    }
+}

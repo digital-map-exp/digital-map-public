@@ -1,0 +1,16 @@
+{
+  "l2-topology-network": {
+    "isAbstract":"yes",
+    "parent":"network",
+    "properties":{
+      "l2-topology-attributes.name":{
+        "Description":"Based on RFC8944 name: Name of the topology",
+        "Type":""
+      },
+      "l2-topology-attributes.flags":{
+        "Description":"Based on RFC8944 flags: Topology Flags",
+        "Type":""
+      }
+    }
+  }
+}

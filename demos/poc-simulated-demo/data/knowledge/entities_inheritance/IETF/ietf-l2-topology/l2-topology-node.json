@@ -1,0 +1,32 @@
+{
+  "l2-topology-node": {
+    "isAbstract": "yes",
+    "parent": "node",
+    "properties": {
+      "l2-node-attributes.name": {
+        "Description": "RFC8944 name: Node name, this is name of the network element",
+        "Type": ""
+      },
+      "l2-node-attributes.flags": {
+        "Description": "RFC8944 flags: Node flags list. It can be used to indicate node flags attributes.",
+        "Type": ""
+      },
+      "l2-node-attributes.bridge-id": {
+        "Description": "RFC8944 bridge-id",
+        "Type": ""
+      },
+      "l2-node-attributes.management-address": {
+        "Description": "RFC8944 management-address",
+        "Type": ""
+      },
+      "l2-node-attributes.management-mac": {
+        "Description": "RFC8944 management-mac",
+        "Type": ""
+      },
+      "l2-node-attributes.management-vlan": {
+        "Description": "RFC8944 management-vlan",
+        "Type": ""
+      }
+    }
+  }
+}

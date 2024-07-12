@@ -1,0 +1,21 @@
+{
+    "ISISArea":{
+        "layer":"Protocol",
+        "sublayer":"ISIS",
+        "parent": "l3-unicast-topology-network",
+        "properties":{
+          "area-address": {
+                "Description":"ISIS Area ID",
+                "Type":""
+            },
+          "level": {
+                "Description":"ISIS Level",
+                "Type":""
+            },
+          "label": {
+                "Description":"ISIS Area label",
+                "Type":""
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "ISISInterface": {
+    "Build_Mode": "netconf",
+    "Build_Method": "python",
+    "Generated_File": "huawei-isis.json",
+    "Input_External_Files": "huawei-system.json",
+    "Python_File": "ISISInterface.py"
+  }
+}

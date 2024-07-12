@@ -1,0 +1,24 @@
+{
+  "l3-unicast-topology-termination-point": {
+    "isAbstract": "yes",
+    "parent":"termination-point",
+    "properties": {
+      "l3-termination-point-attributes.termination-point-type": {
+        "Description": "RFC8346 type ip, unnumbered, interface-name: Indicates the termination point type",
+        "Type": ""
+      },
+      "l3-termination-point-attributes.ip-address": {
+        "Description": "RFC8346 ip-address list: IPv4 or IPv6 address.",
+        "Type": "list"
+      },
+       "l3-termination-point-attributes.unnumbered-id": {
+        "Description": "RFC8346 unnumbered-id: Unnumbered interface identifier",
+        "Type": ""
+      },
+      "l3-termination-point-attributes.interface-name": {
+          "Description": "RFC8346 interface-name: A list of prefixes along with their attributes",
+          "Type": ""
+      }
+    }
+  }
+}

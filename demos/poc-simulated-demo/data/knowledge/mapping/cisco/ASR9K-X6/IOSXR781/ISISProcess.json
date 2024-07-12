@@ -1,0 +1,8 @@
+{
+  "ISISProcess": {
+    "Build_Mode": "netconf",
+    "Build_Method": "python",
+    "Input_External_Files": "openconfig-system.json,openconfig-network-instance.json",
+    "Python_File": "ISISProcess.py"
+  }
+}

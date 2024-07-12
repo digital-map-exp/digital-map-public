@@ -1,0 +1,16 @@
+{
+  "isis-topology-link": {
+    "isAbstract": "yes",
+    "parent":"l3-unicast-topology-link",
+    "properties": {
+      "isis-link-attributes.metric": {
+        "Description": "IS-IS metric.",
+        "Type": ""
+      },
+      "isis-link-attributes.level": {
+          "Description": "Level of an IS-IS link - can be level-1,level-2 or level-1-2.",
+          "Type": ""
+      }
+    }
+  }
+}

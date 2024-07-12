@@ -1,0 +1,24 @@
+{
+  "termination-point": {
+    "isAbstract": "yes",
+    "key": ["node-id", "tp-id"],
+    "properties": {
+      "node-id": {
+        "Description": "RFC8345 node-id",
+        "Type": ""
+      },
+      "network-id": {
+        "Description": "RFC8345 network-id",
+        "Type": ""
+      },
+      "tp-id": {
+        "Description": "RFC8345 tp-id",
+        "Type": ""
+      },
+      "supporting-termination-point": {
+        "Description": "RFC8345 supporting termination point",
+        "Type": ""
+      }
+    }
+  }
+}
