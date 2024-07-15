@@ -3,12 +3,10 @@ import json
 from util.app_logger import get_my_logger, login_decorator
 from util.dir_util import create_dir, del_dir, copy_dir
 from util.dir_util import exists_path, get_all_files
-from digital_map.aoc import aoc
 from util.dir_util import create_dir, del_dir, copy_dir, create_dirs
 
 logger = get_my_logger(__name__)
 
-# Collect from AOC via rest and generate json files, knowledge driven
 @login_decorator
 def generate_flat_entity_types(dm_directories):
     target_entities_knowledge = dm_directories['input']['knowledge']['entities']
