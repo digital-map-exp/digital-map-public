@@ -1,0 +1,1888 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "isis:49.0411",
+        "network-types": {
+          "ietf-l3-unicast-topology:l3-unicast-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology",
+          "ietf-l3-isis-topology:isis-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology"
+        },
+        "supporting-network": [
+          {
+            "network-ref": "Network:Simulated LAB"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "isis:49.0411.0000.0101.0104",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO732",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO732:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO732",
+                  "tp-ref": "CISCO732:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO732:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO732",
+                  "tp-ref": "CISCO732:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO732:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO732",
+                  "tp-ref": "CISCO732:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0411:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0104",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0104",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0411",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0411.0000.0101.0103",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO762",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO762:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO762",
+                  "tp-ref": "CISCO762:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO762:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO762",
+                  "tp-ref": "CISCO762:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO762:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO762",
+                  "tp-ref": "CISCO762:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0411:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0103",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0103",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0411",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0411.0000.0101.0102",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO7102",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO7102:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7102",
+                  "tp-ref": "CISCO7102:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO7102:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7102",
+                  "tp-ref": "CISCO7102:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO7102:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7102",
+                  "tp-ref": "CISCO7102:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0411:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0102",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0102",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0411",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0411.0000.0101.0101",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO7112",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO7112:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7112",
+                  "tp-ref": "CISCO7112:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO7112:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7112",
+                  "tp-ref": "CISCO7112:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0411:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0101",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0101",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0411",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "isis:CISCO732:GigabitEthernet0/0/0/0:isis:CISCO762:GigabitEthernet0/0/0/1",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0104",
+              "source-tp": "isis:CISCO732:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0103",
+              "dest-tp": "isis:CISCO762:GigabitEthernet0/0/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO732:GigabitEthernet0/0/0/0:0000.0101.0103"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO732:GE0/0/0/0:isis:CISCO762:GE0/0/0/1",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '20'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '20'}}}, 'packet-counters': {'lsp': {'state': {'received': '71', 'processed': '71', 'sent': '47'}}, 'iih': {'state': {'received': '3470', 'processed': '3470', 'sent': '3467'}}, 'psnp': {'state': {'received': '45', 'processed': '45', 'sent': '56'}}, 'csnp': {'state': {'received': '1', 'processed': '1', 'sent': '1'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0103', 'state': {'system-id': '0000.0101.0103', 'neighbor-ipv4-address': '172.16.4.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0004.0004', 'local-extended-circuit-id': '7', 'neighbor-extended-circuit-id': '8', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '28', 'up-time': '30306', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': ['IPV4', 'IPV6']}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO762:GigabitEthernet0/0/0/0:isis:CISCO7102:GigabitEthernet0/0/0/1",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0103",
+              "source-tp": "isis:CISCO762:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0102",
+              "dest-tp": "isis:CISCO7102:GigabitEthernet0/0/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO762:GigabitEthernet0/0/0/0:0000.0101.0102"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO762:GE0/0/0/0:isis:CISCO7102:GE0/0/0/1",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}}}, 'packet-counters': {'lsp': {'state': {'received': '2156', 'processed': '2156', 'dropped': '0', 'sent': '196', 'retransmit': '34'}}, 'iih': {'state': {'received': '188247', 'processed': '188247', 'dropped': '0', 'sent': '188241', 'retransmit': '0'}}, 'psnp': {'state': {'received': '189', 'processed': '189', 'dropped': '0', 'sent': '1596', 'retransmit': '0'}}, 'csnp': {'state': {'received': '1', 'processed': '1', 'dropped': '0', 'sent': '1', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0102', 'state': {'system-id': '0000.0101.0102', 'neighbor-ipv4-address': '172.16.3.2', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0005.0004', 'local-extended-circuit-id': '7', 'neighbor-extended-circuit-id': '9', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '29', 'up-time': '1647735', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': ['IPV4', 'IPV6']}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO762:GigabitEthernet0/0/0/1:isis:CISCO732:GigabitEthernet0/0/0/0",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0103",
+              "source-tp": "isis:CISCO762:GigabitEthernet0/0/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0104",
+              "dest-tp": "isis:CISCO732:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO762:GigabitEthernet0/0/0/1:0000.0101.0104"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO762:GE0/0/0/1:isis:CISCO732:GE0/0/0/0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}}}, 'packet-counters': {'lsp': {'state': {'received': '96', 'processed': '96', 'dropped': '0', 'sent': '1460', 'retransmit': '91'}}, 'iih': {'state': {'received': '141507', 'processed': '141507', 'dropped': '0', 'sent': '188366', 'retransmit': '0'}}, 'psnp': {'state': {'received': '1114', 'processed': '1114', 'dropped': '0', 'sent': '90', 'retransmit': '0'}}, 'csnp': {'state': {'received': '6', 'processed': '6', 'dropped': '0', 'sent': '6', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0104', 'state': {'system-id': '0000.0101.0104', 'neighbor-ipv4-address': '172.16.4.2', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0003.0003', 'local-extended-circuit-id': '8', 'neighbor-extended-circuit-id': '7', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '23', 'up-time': '30333', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': ['IPV4', 'IPV6']}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO7102:GigabitEthernet0/0/0/0:isis:CISCO7112:GigabitEthernet0/0/0/1",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0102",
+              "source-tp": "isis:CISCO7102:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0101",
+              "dest-tp": "isis:CISCO7112:GigabitEthernet0/0/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO7102:GigabitEthernet0/0/0/0:0000.0101.0101"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO7102:GE0/0/0/0:isis:CISCO7112:GE0/0/0/1",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'state': {'level-number': '2', 'enabled': 'true'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '26'}}}, 'packet-counters': {'lsp': {'state': {'received': '3620', 'processed': '3620', 'dropped': '1', 'sent': '3956', 'retransmit': '2082'}}, 'iih': {'state': {'received': '189670', 'processed': '189670', 'dropped': '0', 'sent': '189319', 'retransmit': '0'}}, 'psnp': {'state': {'received': '2555', 'processed': '2555', 'dropped': '0', 'sent': '2406', 'retransmit': '0'}}, 'csnp': {'state': {'received': '629', 'processed': '629', 'dropped': '0', 'sent': '671', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'hello-authentication': {'state': {'enabled': 'false'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0101', 'state': {'system-id': '0000.0101.0101', 'neighbor-ipv4-address': '172.16.2.2', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0006.0004', 'local-extended-circuit-id': '8', 'neighbor-extended-circuit-id': '7', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'up-timestamp': '1721147746096045967', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO7102:GigabitEthernet0/0/0/1:isis:CISCO762:GigabitEthernet0/0/0/0",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0102",
+              "source-tp": "isis:CISCO7102:GigabitEthernet0/0/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0103",
+              "dest-tp": "isis:CISCO762:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO7102:GigabitEthernet0/0/0/1:0000.0101.0103"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO7102:GE0/0/0/1:isis:CISCO762:GE0/0/0/0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'state': {'level-number': '2', 'enabled': 'true'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}}}, 'packet-counters': {'lsp': {'state': {'received': '222', 'processed': '222', 'dropped': '0', 'sent': '2183', 'retransmit': '71'}}, 'iih': {'state': {'received': '189138', 'processed': '189138', 'dropped': '0', 'sent': '189396', 'retransmit': '0'}}, 'psnp': {'state': {'received': '1611', 'processed': '1611', 'dropped': '0', 'sent': '204', 'retransmit': '0'}}, 'csnp': {'state': {'received': '4', 'processed': '4', 'dropped': '0', 'sent': '4', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'hello-authentication': {'state': {'enabled': 'false'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0103', 'state': {'system-id': '0000.0101.0103', 'neighbor-ipv4-address': '172.16.3.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0004.0003', 'local-extended-circuit-id': '9', 'neighbor-extended-circuit-id': '7', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'up-timestamp': '1719500838797430603', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO7112:GigabitEthernet0/0/0/1:isis:CISCO7102:GigabitEthernet0/0/0/0",
+            "source": {
+              "source-node": "isis:49.0411.0000.0101.0101",
+              "source-tp": "isis:CISCO7112:GigabitEthernet0/0/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0411.0000.0101.0102",
+              "dest-tp": "isis:CISCO7102:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO7112:GigabitEthernet0/0/0/1:0000.0101.0102"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO7112:GE0/0/0/1:isis:CISCO7102:GE0/0/0/0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'state': {'level-number': '2', 'enabled': 'true'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10', 'enabled': 'true'}}}, 'packet-counters': {'lsp': {'state': {'received': '2893', 'processed': '2893', 'dropped': '0', 'sent': '3656', 'retransmit': '1451'}}, 'iih': {'state': {'received': '189263', 'processed': '189263', 'dropped': '0', 'sent': '190783', 'retransmit': '0'}}, 'psnp': {'state': {'received': '2385', 'processed': '2385', 'dropped': '0', 'sent': '2556', 'retransmit': '0'}}, 'csnp': {'state': {'received': '656', 'processed': '656', 'dropped': '0', 'sent': '628', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'hello-authentication': {'state': {'enabled': 'false'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0102', 'state': {'system-id': '0000.0101.0102', 'neighbor-ipv4-address': '172.16.2.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0005.0003', 'local-extended-circuit-id': '7', 'neighbor-extended-circuit-id': '8', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'up-timestamp': '1721147746091603673', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0411', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          }
+        ],
+        "ietf-l3-unicast-topology:l3-topology-attributes": [
+          {
+            "name": "TODO",
+            "flag": "TODO"
+          }
+        ]
+      },
+      {
+        "network-id": "isis:49.0412",
+        "network-types": {
+          "ietf-l3-unicast-topology:l3-unicast-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology",
+          "ietf-l3-isis-topology:isis-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology"
+        },
+        "supporting-network": [
+          {
+            "network-ref": "Network:Simulated LAB"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "isis:49.0412.0000.0101.0101",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO7112",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO7112:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7112",
+                  "tp-ref": "CISCO7112:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO7112:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO7112",
+                  "tp-ref": "CISCO7112:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0412:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0101",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0101",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0412",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0412.0000.0101.010a",
+            "supporting-node": [
+              {
+                "node-ref": "HUAWEIR023",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:HUAWEIR023:Ethernet3/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "HUAWEIR023",
+                  "tp-ref": "HUAWEIR023:Ethernet3/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "::",
+                  "unnumbered-id": "10",
+                  "interface-name": "Ethernet3/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "point-to-point",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:HUAWEIR023:LoopBack0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "HUAWEIR023",
+                  "tp-ref": "HUAWEIR023:LoopBack0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "74",
+                  "interface-name": "LoopBack0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "point-to-point",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "HUAWEIR023",
+                "flag": "isis",
+                "router-id": "10.95.90.59",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.010a",
+                    "level": "level-2",
+                    "area-address": "49.0412",
+                    "lsp-lifetime": "1200",
+                    "lsp-refresh-interval": "900"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR: ",
+                    "lsp-lifetime": "1200",
+                    "lsp-refresh-interval": "900",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:JUNOS214:0",
+            "supporting-node": [
+              {
+                "node-ref": "JUNOS214",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:JUNOS214:lo0.0:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS214",
+                  "tp-ref": "JUNOS214:lo0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS214:527:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS214",
+                  "tp-ref": "JUNOS214:ge-0/0/0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "527",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS214:528:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS214",
+                  "tp-ref": "JUNOS214:ge-0/0/1.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "528",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS214:529:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS214",
+                  "tp-ref": "JUNOS214:ge-0/0/2.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "529",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS214:530:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS214",
+                  "tp-ref": "JUNOS214:ge-0/0/3.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "530",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "0",
+                "flag": "isis",
+                "router-id": "0000.0101.0106",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0106",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:JUNOS224:0",
+            "supporting-node": [
+              {
+                "node-ref": "JUNOS224",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:JUNOS224:lo0.0:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS224",
+                  "tp-ref": "JUNOS224:lo0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS224:527:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS224",
+                  "tp-ref": "JUNOS224:ge-0/0/0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "527",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS224:528:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS224",
+                  "tp-ref": "JUNOS224:ge-0/0/1.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "528",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "0",
+                "flag": "isis",
+                "router-id": "0000.0101.0107",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0107",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:JUNOS232:0",
+            "supporting-node": [
+              {
+                "node-ref": "JUNOS232",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:JUNOS232:lo0.0:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS232",
+                  "tp-ref": "JUNOS232:lo0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS232:527:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS232",
+                  "tp-ref": "JUNOS232:ge-0/0/0.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "527",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS232:528:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS232",
+                  "tp-ref": "JUNOS232:ge-0/0/1.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "528",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS232:529:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS232",
+                  "tp-ref": "JUNOS232:ge-0/0/2.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "529",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:JUNOS232:530:0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "JUNOS232",
+                  "tp-ref": "JUNOS232:ge-0/0/3.0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "530",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-1-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "0",
+                "flag": "isis",
+                "router-id": "0000.0101.010b",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.010b",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0412.0000.0101.0108",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO772",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO772:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO772",
+                  "tp-ref": "CISCO772:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO772:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO772",
+                  "tp-ref": "CISCO772:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0412:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0108",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0108",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0412",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "isis:CISCO7112:GigabitEthernet0/0/0/0:isis:JUNOS232:527",
+            "source": {
+              "source-node": "isis:49.0412.0000.0101.0101",
+              "source-tp": "isis:CISCO7112:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.010b",
+              "dest-tp": "isis:JUNOS232:527"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO7112:GigabitEthernet0/0/0/0:0000.0101.010b"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO7112:GE0/0/0/0:isis:JUNOS232:527",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'state': {'level-number': '2', 'enabled': 'true'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '17', 'enabled': 'true'}}}, 'packet-counters': {'lsp': {'state': {'received': '58623', 'processed': '58623', 'dropped': '0', 'sent': '55132', 'retransmit': '24169'}}, 'iih': {'state': {'received': '210473', 'processed': '210473', 'dropped': '0', 'sent': '189452', 'retransmit': '0'}}, 'psnp': {'state': {'received': '4759', 'processed': '4759', 'dropped': '0', 'sent': '35685', 'retransmit': '0'}}, 'csnp': {'state': {'received': '84907', 'processed': '84907', 'dropped': '0', 'sent': '2', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'hello-authentication': {'state': {'enabled': 'false'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.010b', 'state': {'system-id': '0000.0101.010b', 'neighbor-ipv4-address': '172.17.1.2', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.000f.0002', 'local-extended-circuit-id': '6', 'neighbor-extended-circuit-id': '333', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_1_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'up-timestamp': '1719491945506352458', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0412', 'nlpid': ['IPV4', 'IPV6']}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:HUAWEIR023:Ethernet3/0/0:isis:JUNOS232:528",
+            "source": {
+              "source-node": "isis:49.0412.0000.0101.010a",
+              "source-tp": "isis:HUAWEIR023:Ethernet3/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.010b",
+              "dest-tp": "isis:JUNOS232:528"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "HUAWEIR023:Ethernet3/0/0-JUNOS232:0000000342"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:HUAWEIR023:Ethernet3/0/0:isis:JUNOS232:528",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "--",
+                "level": "level-2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS214:527:0:ge-0/0/0.0",
+            "source": {
+              "source-node": "isis:JUNOS214:0",
+              "source-tp": "isis:JUNOS214:527:0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.0105",
+              "dest-tp": "isis:NOKIA2310:NO_LLDP_FOUND"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS214:ge-0/0/0.0-NOKIA2310:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS214:527:0:ge-0/0/0.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS214:528:0:ge-0/0/1.0",
+            "source": {
+              "source-node": "isis:JUNOS214:0",
+              "source-tp": "isis:JUNOS214:528:0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.0108",
+              "dest-tp": "isis:CISCO772:GigabitEthernet0/0/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS214:ge-0/0/1.0-CISCO772:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS214:528:0:ge-0/0/1.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS214:529:0:ge-0/0/2.0",
+            "source": {
+              "source-node": "isis:JUNOS214:0",
+              "source-tp": "isis:JUNOS214:529:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS232:0",
+              "dest-tp": "isis:JUNOS232:529:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS214:ge-0/0/2.0-JUNOS232:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS214:529:0:ge-0/0/2.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS214:530:0:ge-0/0/3.0",
+            "source": {
+              "source-node": "isis:JUNOS214:0",
+              "source-tp": "isis:JUNOS214:530:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS224:0",
+              "dest-tp": "isis:JUNOS224:528:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS214:ge-0/0/3.0-JUNOS224:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS214:530:0:ge-0/0/3.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS224:527:0:ge-0/0/0.0",
+            "source": {
+              "source-node": "isis:JUNOS224:0",
+              "source-tp": "isis:JUNOS224:527:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS232:0",
+              "dest-tp": "isis:JUNOS232:530:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS224:ge-0/0/0.0-JUNOS232:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS224:527:0:ge-0/0/0.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS224:528:0:ge-0/0/1.0",
+            "source": {
+              "source-node": "isis:JUNOS224:0",
+              "source-tp": "isis:JUNOS224:528:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS214:0",
+              "dest-tp": "isis:JUNOS214:530:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS224:ge-0/0/1.0-JUNOS214:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS224:528:0:ge-0/0/1.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS232:527:0:ge-0/0/0.0",
+            "source": {
+              "source-node": "isis:JUNOS232:0",
+              "source-tp": "isis:JUNOS232:527:0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.0101",
+              "dest-tp": "isis:CISCO7112:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS232:ge-0/0/0.0-CISCO7112:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS232:527:0:ge-0/0/0.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS232:528:0:ge-0/0/1.0",
+            "source": {
+              "source-node": "isis:JUNOS232:0",
+              "source-tp": "isis:JUNOS232:528:0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.010a",
+              "dest-tp": "isis:HUAWEIR023:Ethernet3/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS232:ge-0/0/1.0-HUAWEIR023:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS232:528:0:ge-0/0/1.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS232:529:0:ge-0/0/2.0",
+            "source": {
+              "source-node": "isis:JUNOS232:0",
+              "source-tp": "isis:JUNOS232:529:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS214:0",
+              "dest-tp": "isis:JUNOS214:529:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS232:ge-0/0/2.0-JUNOS214:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS232:529:0:ge-0/0/2.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:JUNOS232:530:0:ge-0/0/3.0",
+            "source": {
+              "source-node": "isis:JUNOS232:0",
+              "source-tp": "isis:JUNOS232:530:0"
+            },
+            "destination": {
+              "dest-node": "isis:JUNOS224:0",
+              "dest-tp": "isis:JUNOS224:527:0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "JUNOS232:ge-0/0/3.0-JUNOS224:7"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:JUNOS232:530:0:ge-0/0/3.0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "0",
+                "level": "LEVEL_2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO772:GigabitEthernet0/0/0/1:isis:JUNOS214:528",
+            "source": {
+              "source-node": "isis:49.0412.0000.0101.0108",
+              "source-tp": "isis:CISCO772:GigabitEthernet0/0/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0412.0000.0101.0106",
+              "dest-tp": "isis:JUNOS214:528"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO772:GigabitEthernet0/0/0/1:0000.0101.0106"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO772:GE0/0/0/1:isis:JUNOS214:528",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '35'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '35'}}}, 'packet-counters': {'lsp': {'state': {'received': '11537', 'processed': '11537', 'dropped': '0', 'sent': '201', 'retransmit': '78'}}, 'iih': {'state': {'received': '56194', 'processed': '56194', 'dropped': '0', 'sent': '50576', 'retransmit': '0'}}, 'psnp': {'state': {'received': '40', 'processed': '40', 'dropped': '0', 'sent': '11270', 'retransmit': '0'}}, 'csnp': {'state': {'received': '29296', 'processed': '29296', 'dropped': '0', 'sent': '1', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0106', 'state': {'system-id': '0000.0101.0106', 'neighbor-ipv4-address': '172.17.2.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.000b.0003', 'local-extended-circuit-id': '4', 'neighbor-extended-circuit-id': '334', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_1_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '26', 'up-time': '442543', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0412', 'nlpid': ['IPV4', 'IPV6']}}}}"
+              }
+            }
+          }
+        ],
+        "ietf-l3-unicast-topology:l3-topology-attributes": [
+          {
+            "name": "TODO",
+            "flag": "TODO"
+          }
+        ]
+      },
+      {
+        "network-id": "isis:49.0413",
+        "network-types": {
+          "ietf-l3-unicast-topology:l3-unicast-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology",
+          "ietf-l3-isis-topology:isis-topology": "ietf-l3-unicast-topology:l3-unicast-topology,ietf-l3-isis-topology:isis-topology"
+        },
+        "supporting-network": [
+          {
+            "network-ref": "Network:Simulated LAB"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "isis:49.0413.0000.0101.010a",
+            "supporting-node": [
+              {
+                "node-ref": "HUAWEIR023",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:HUAWEIR023:Ethernet3/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "HUAWEIR023",
+                  "tp-ref": "HUAWEIR023:Ethernet3/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "::",
+                  "unnumbered-id": "12",
+                  "interface-name": "Ethernet3/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "point-to-point",
+                      "level": "level-1-2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "HUAWEIR023",
+                "flag": "isis",
+                "router-id": "10.95.90.59",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.010a",
+                    "level": "level-2",
+                    "area-address": "49.0413",
+                    "lsp-lifetime": "1200",
+                    "lsp-refresh-interval": "900"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR: ",
+                    "lsp-lifetime": "1200",
+                    "lsp-refresh-interval": "900",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0413.0000.0101.0108",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO772",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO772:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO772",
+                  "tp-ref": "CISCO772:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO772:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO772",
+                  "tp-ref": "CISCO772:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0413:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0108",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0108",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0413",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "isis:49.0413.0000.0101.0109",
+            "supporting-node": [
+              {
+                "node-ref": "CISCO782",
+                "network-ref": "Network:Simulated LAB"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "isis:CISCO782:Loopback0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO782",
+                  "tp-ref": "CISCO782:Loopback0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "Loopback0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "LEVEL_2",
+                      "is-passive": "True"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO782:GigabitEthernet0/0/0/0",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO782",
+                  "tp-ref": "CISCO782:GigabitEthernet0/0/0/0"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/0",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              },
+              {
+                "tp-id": "isis:CISCO782:GigabitEthernet0/0/0/1",
+                "supporting-termination-point": {
+                  "network-ref": "Network:Simulated LAB",
+                  "node-ref": "CISCO782",
+                  "tp-ref": "CISCO782:GigabitEthernet0/0/0/1"
+                },
+                "ietf-l3-unicast-topology:l3-termination-point-attributes": {
+                  "ip-address": "['']",
+                  "unnumbered-id": "['']",
+                  "interface-name": "GigabitEthernet0/0/0/1",
+                  "ietf-l3-isis-topology:isis-termination-point-attributes": [
+                    {
+                      "interface-type": "POINT_TO_POINT",
+                      "level": "level-2",
+                      "is-passive": "False"
+                    }
+                  ]
+                }
+              }
+            ],
+            "ietf-l3-unicast-topology:l3-node-attributes": [
+              {
+                "name": "49.0413:0",
+                "flag": "isis",
+                "router-id": "0000.0101.0109",
+                "prefix": {
+                  "prefix": "TBD",
+                  "metric": "TBD",
+                  "flag": "isis"
+                },
+                "ietf-l3-isis-topology:isis-node-attributes": [
+                  {
+                    "system-id": "0000.0101.0109",
+                    "level": "LEVEL_2",
+                    "area-address": "49.0413",
+                    "lsp-lifetime": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-refresh-interval": "DISCUSS WITH OSCAR FOR OPENCONFIG"
+                  }
+                ],
+                "ietf-l3-isis-topology:isis-timer-attributes": [
+                  {
+                    "lsp-mtu": "DISCUSS WITH OSCAR FOR OPENCONFIG",
+                    "lsp-lifetime": "65535",
+                    "lsp-refresh-interval": "65000",
+                    "poi-ltv": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "isis:HUAWEIR023:Ethernet3/0/1:isis:CISCO782:GigabitEthernet0/0/0/1",
+            "source": {
+              "source-node": "isis:49.0413.0000.0101.010a",
+              "source-tp": "isis:HUAWEIR023:Ethernet3/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0413.0000.0101.0109",
+              "dest-tp": "isis:CISCO782:GigabitEthernet0/0/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "HUAWEIR023:Ethernet3/0/1-CISCO782:0000000009"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:HUAWEIR023:Ethernet3/0/1:isis:CISCO782:GE0/0/0/1",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "--",
+                "level": "level-2"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO772:GigabitEthernet0/0/0/0:isis:CISCO782:GigabitEthernet0/0/0/0",
+            "source": {
+              "source-node": "isis:49.0413.0000.0101.0108",
+              "source-tp": "isis:CISCO772:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0413.0000.0101.0109",
+              "dest-tp": "isis:CISCO782:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO772:GigabitEthernet0/0/0/0:0000.0101.0109"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO772:GE0/0/0/0:isis:CISCO782:GE0/0/0/0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '15'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '15'}}}, 'packet-counters': {'lsp': {'state': {'received': '4714', 'processed': '4714', 'dropped': '0', 'sent': '18', 'retransmit': '5'}}, 'iih': {'state': {'received': '50555', 'processed': '50555', 'dropped': '0', 'sent': '50575', 'retransmit': '0'}}, 'psnp': {'state': {'received': '14', 'processed': '14', 'dropped': '0', 'sent': '4558', 'retransmit': '0'}}, 'csnp': {'state': {'received': '1', 'processed': '1', 'dropped': '0', 'sent': '1', 'retransmit': '0'}}, 'unknown': {'state': {'received': '0', 'processed': '0', 'dropped': '0', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0109', 'state': {'system-id': '0000.0101.0109', 'neighbor-ipv4-address': '172.18.3.2', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0002.0003', 'local-extended-circuit-id': '8', 'neighbor-extended-circuit-id': '8', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '21', 'up-time': '442546', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0413', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO782:GigabitEthernet0/0/0/0:isis:CISCO772:GigabitEthernet0/0/0/0",
+            "source": {
+              "source-node": "isis:49.0413.0000.0101.0109",
+              "source-tp": "isis:CISCO782:GigabitEthernet0/0/0/0"
+            },
+            "destination": {
+              "dest-node": "isis:49.0413.0000.0101.0108",
+              "dest-tp": "isis:CISCO772:GigabitEthernet0/0/0/0"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO782:GigabitEthernet0/0/0/0:0000.0101.0108"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO782:GE0/0/0/0:isis:CISCO772:GE0/0/0/0",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}}}, 'packet-counters': {'lsp': {'state': {'received': '70294', 'processed': '70294', 'dropped': '0', 'sent': '19263', 'retransmit': '8887'}}, 'iih': {'state': {'received': '188639', 'processed': '188639', 'dropped': '0', 'sent': '189450', 'retransmit': '0'}}, 'psnp': {'state': {'received': '12509', 'processed': '12509', 'dropped': '0', 'sent': '62590', 'retransmit': '0'}}, 'csnp': {'state': {'received': '345', 'processed': '345', 'dropped': '0', 'sent': '364', 'retransmit': '0'}}, 'unknown': {'state': {'received': '19', 'processed': '19', 'dropped': '19', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.0108', 'state': {'system-id': '0000.0101.0108', 'neighbor-ipv4-address': '172.18.3.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '5003.0001.0003', 'local-extended-circuit-id': '8', 'neighbor-extended-circuit-id': '8', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '24', 'up-time': '442542', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0413', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          },
+          {
+            "link-id": "isis:CISCO782:GigabitEthernet0/0/0/1:isis:HUAWEIR023:Ethernet3/0/1",
+            "source": {
+              "source-node": "isis:49.0413.0000.0101.0109",
+              "source-tp": "isis:CISCO782:GigabitEthernet0/0/0/1"
+            },
+            "destination": {
+              "dest-node": "isis:49.0413.0000.0101.010a",
+              "dest-tp": "isis:HUAWEIR023:Ethernet3/0/1"
+            },
+            "supporting-link": {
+              "network-ref": "Network:Simulated LAB",
+              "link-ref": "CISCO782:GigabitEthernet0/0/0/1:0000.0101.010a"
+            },
+            "ietf-l3-unicast-topology:l3-link-attributes": {
+              "name": "isis:CISCO782:GE0/0/0/1:isis:HUAWEIR023:Ethernet3/0/1",
+              "flag": "isis",
+              "metric1": "tbd",
+              "metric2": "tbd",
+              "ietf-l3-isis-topology:isis-link-attributes": {
+                "metric": "['']",
+                "level": "{'level-number': '2', 'config': {'level-number': '2'}, 'state': {'level-number': '2'}, 'afi-safi': {'af': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'config': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}, 'state': {'afi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:IPV4'}, 'safi-name': {'@xmlns:idx': 'http://openconfig.net/yang/isis-types', '#text': 'idx:UNICAST'}, 'metric': '10'}}}, 'packet-counters': {'lsp': {'state': {'received': '2820', 'processed': '2820', 'dropped': '0', 'sent': '26887', 'retransmit': '13468'}}, 'iih': {'state': {'received': '189993', 'processed': '189993', 'dropped': '0', 'sent': '189379', 'retransmit': '0'}}, 'psnp': {'state': {'received': '26352', 'processed': '26352', 'dropped': '0', 'sent': '2109', 'retransmit': '0'}}, 'csnp': {'state': {'received': '670', 'processed': '670', 'dropped': '0', 'sent': '224', 'retransmit': '0'}}, 'unknown': {'state': {'received': '1061', 'processed': '1061', 'dropped': '1061', 'sent': '0', 'retransmit': '0'}}}, 'timers': {'state': {'hello-interval': '10', 'hello-multiplier': '3'}}, 'adjacencies': {'adjacency': {'system-id': '0000.0101.010a', 'state': {'system-id': '0000.0101.010a', 'neighbor-ipv4-address': '172.18.2.1', 'neighbor-ipv6-address': '::', 'neighbor-snpa': '3872.2311.0301', 'local-extended-circuit-id': '9', 'neighbor-extended-circuit-id': '11', 'priority': '0', 'neighbor-circuit-type': 'LEVEL_2', 'adjacency-type': 'LEVEL_2', 'adjacency-state': 'UP', 'remaining-hold-time': '21', 'up-time': '4391', 'multi-topology': 'false', 'topology': 'IPV4_UNICAST', 'restart-support': 'true', 'restart-suppress': 'false', 'restart-status': 'false', 'area-address': '49.0413', 'nlpid': 'IPV4'}}}}"
+              }
+            }
+          }
+        ],
+        "ietf-l3-unicast-topology:l3-topology-attributes": [
+          {
+            "name": "TODO",
+            "flag": "TODO"
+          }
+        ]
+      }
+    ]
+  }
+}
+

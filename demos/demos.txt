@@ -1,5 +1,0 @@
-The following are the different PoCs:
-poc-simulated-demo
-    - all scenarios based on the simulated telefonica network (poc-simulated-demo/data-generated/netconf)
-    - areas as entities
-    - future drafts

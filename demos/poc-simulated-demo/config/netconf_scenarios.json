@@ -1,5 +1,87 @@
 {
     "scenarios": [
+        {
+            "scenario": "get_running_config"
+        },
+        {
+            "scenario": "server_capabilities"
+        },
+        {
+            "scenario": "get_yang_modules_summary"
+        },
+        {
+            "scenario": "get_yang_modules_and_submodules"
+        },
+        {
+            "scenario": "get_path_list",
+            "path_list": [
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:system xmlns:ns0='http://openconfig.net/yang/system'/>",
+                    "file": "openconfig-system"
+                },
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:interfaces xmlns:ns0='http://openconfig.net/yang/interfaces'/>",
+                    "file": "openconfig-interfaces"
+                },
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:lldp xmlns:ns0='http://openconfig.net/yang/lldp'/>",
+                    "file": "openconfig-lldp"
+                },
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:network-instances xmlns:ns0='http://openconfig.net/yang/network-instance'/>",
+                    "file": "openconfig-network-instance"
+                },
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:components xmlns:ns0='http://openconfig.net/yang/platform'/>",
+                    "file": "openconfig-platform"
+                },
+                {
+                    "vendor": "openconfig",
+                    "path": "<ns0:routing-policy xmlns:ns0='http://openconfig.net/yang/routing-policy'/>",
+                    "file": "openconfig-routing-policy"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:system xmlns:ns0='urn:huawei:yang:huawei-system'/>",
+                    "file": "huawei-system"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:network-instance xmlns:ns0='urn:huawei:yang:huawei-network-instance'/>",
+                    "file": "huawei-network-instance"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:mpls xmlns:ns0='urn:huawei:yang:huawei-mpls'/>",
+                    "file": "huawei-mpls"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:ifm xmlns:ns0='urn:huawei:yang:huawei-ifm'/>",
+                    "file": "huawei-ifm"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:tunnel-management xmlns:ns0='urn:huawei:yang:huawei-tunnel-management'/>",
+                    "file": "huawei-tunnel-management"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:ifm xmlns:ns0='urn:huawei:yang:huawei-ifm'/>",
+                    "file": "huawei-ifm"
+                },
+                {
+                    "vendor": "huawei",
+                    "path": "<ns0:fib xmlns:ns0='urn:huawei:yang:huawei-fib'/>",
+                    "file": "huawei-fib"
+                }
+            ]
+        }
     ]
 }
 

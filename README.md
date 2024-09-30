@@ -1,8 +1,31 @@
 # Digital Map
 ## Digital Map Introduction
+Digital maps are crucial tools that provide graphical representations of geographical data, enabling users to visualize 
+and interact with spatial information effectively. As outlined in RFC 8345, which focuses on the architecture of network
+ topology maps, digital maps can represent complex network topologies, offering insights into the relationships and 
+interconnections between different network elements.
 
-Below is a snippet from [RFC8345](https://datatracker.ietf.org/doc/rfc8345/). It shows the core modules and sample of other augmentations.  
-The abstract network node can be augmented in inventory and
+These maps enhance our understanding of both physical and logical structures, allowing for better planning, management, 
+and troubleshooting of networks. By integrating various data sources, digital maps facilitate real-time updates and 
+analytics, making them indispensable in fields such as telecommunications, urban planning, and logistics. 
+The standardization of mapping protocols, as discussed in RFC 8345, ensures interoperability among different systems, 
+further advancing the utility of digital maps in various applications.
+
+The Core components are:
+- Network Topology: Defines the structure and layout of the network, including nodes (devices) and links (connections).
+- Node: Represents a network device, such as a router or switch. Each node can have attributes, such as its identifier and type.
+- Link: Describes the connection between two nodes, detailing the characteristics like bandwidth and latency.
+- Termination Points: These are specific endpoints of links within a network. They represent the interfaces where devices connect and facilitate data transmission. Each termination point is associated with a node and is crucial for defining how data flows across the network.
+- Support Relationships: This refers to the associations between nodes and the networks they support. A supporting node may provide additional functionality or redundancy, indicating that one node relies on another for certain operations. These relationships help in understanding the dependencies and interactions within the network, enhancing overall topology representation.
+
+Together, termination points and support relationships enrich the network topology by providing clarity on connectivity 
+and operational dependencies, essential for effective network management and troubleshooting.
+-------------
+
+Below is a snippet from [RFC8345](https://datatracker.ietf.org/doc/rfc8345/). It shows the core modules and sample of 
+other augmentations.
+
+The abstract network node is augmented by inventory and
 topology data models with inventory-specific and topology-specific
 attributes.  The network hierarchy (stack) allows any given network
 to have one or more "supporting networks".  The relationship between
@@ -25,11 +48,12 @@ using the supporting relationships.
 ## DEMO
 In the demo we aim to:
 1. Map yang based topology modules to json ones.
-2. Map device level yang data to topology data.
-3. Create nodes in each layer with their respective termination points.
-4. In each layer, add links between termination points.
-5. Add support relationships between layers.
-6. Provide an example northbound API to execute queries.
+2. Collect device configs using netconf such as running-config, xpath of certain modules
+3. Map device level yang data to topology data.
+4. Create nodes in each layer with their respective termination points.
+5. In each layer, add links between termination points.
+6. Add support relationships between layers.
+7. Provide an example northbound API to execute queries.
 
 
 In this demo, we focus on the below three layers.
@@ -39,7 +63,9 @@ In this demo, we focus on the below three layers.
 
 
 ## Requirement
-We store the result relations in [neo4j](https://neo4j.com/). You can follow below instructions to install neo4j docker.
+pip install -r requirements.txt
+
+Result relations are stored in [neo4j](https://neo4j.com/). You can follow below instructions to install neo4j docker.
 
 ### neo4j docker install
 ```
@@ -56,7 +82,12 @@ User has two options for the config collection phase.
 
 Under demos folder add your new folder demo name (in our example here it's "poc-simulated-demo")
 
-### digital_map_db.json
+## Building Blocks
+![building_blocks.png](building_blocks.png)
+
+### Config
+
+#### digital_map_db.json
 - update with the neo4j ip and credentials
 
 #### netconf_devices.json
@@ -155,7 +186,7 @@ in [rfc8944](https://datatracker.ietf.org/doc/rfc8944/). Since we are define the
 }
 ```
 ### entities_inheritance/l2-topology/ethernet
-This section is used to allow the user to extend the above abstract definitions with more metadata if needed.
+This section is used as concrete implementations for the above definitions with more metadata if needed.
 Below is a snippet of `l2-topology/dm-l2-network` where we extend `IETF/ietf-l2-topology/l2-topology-network` with
 `label`.
 It's worth to note that file name will be mapped at the end to the entity name. I,e l2 created entities at the end
@@ -175,6 +206,7 @@ will be named in our case `dm-l2-network` and so on.
     }
 }
 ```
+
 ### entities_inheritance/Protocol/ISIS
 
 If we take a snippet from `entities_inheritance/IETF/ietf-l3-isis-topology/isis-topology-node.json` you'll see
