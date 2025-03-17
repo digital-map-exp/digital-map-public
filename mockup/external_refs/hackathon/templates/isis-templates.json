@@ -1,0 +1,35 @@
+{
+  "template": {
+    "template": [
+      {
+        "template-id": "isis-configuration",
+        "description": "isis configuration",
+        "template-type": {
+          "base": "CONFIG",
+          "is-historical": false,
+          "extra-label": []
+        },
+        "parameter": [
+        ],
+        "request": [
+          {
+            "request-type": "RESTCONF",
+            "request-builder": {
+              "xpath": "/rt:routing/rt:control-plane-protocols/rt:control-plane-protocol/isis:isis",
+              "namespace": [
+                {
+                  "prefix": "rt",
+                  "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing"
+                },
+                {
+                  "prefix": "isis",
+                  "namespace": "urn:ietf:params:xml:ns:yang:ietf-isis"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

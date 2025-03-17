@@ -1,0 +1,85 @@
+module draft-relation-appr-1 {
+
+    yang-version 1.1;
+    namespace "urn:ietf:params:xml:ns:yang:draft-relation-appr-1";
+    prefix "dr-rel-appr-1";
+
+    import draft-relation-common {
+        prefix dr-rel-common;
+        reference
+            "common attributes for relations";
+    }
+
+    import ietf-inet-types {
+        prefix inet;
+        reference
+            "RFC 6991: Common YANG Data Types";
+    }
+
+    import ietf-network {
+        prefix nw;
+        reference
+            "RFC 8345: A YANG Data Model for Network Topologies";
+    }
+
+    import ietf-network-topology {
+        prefix nt;
+        reference
+            "RFC 8345: A YANG Data Model for Network Topologies";
+    }
+
+    organization
+        "INSA Lyon";
+
+    contact
+        "Editor:   Vivekananda Boudia
+        <mailto:vivekananda.boudia@insa-lyon.fr>";
+
+    description
+        "relations inside of RFC8345 using augmentations";
+
+    revision 2025-03-09 {
+        description
+            "Initial revision";
+        reference
+            "";
+    }
+
+
+    grouping external-ref-gr {
+        description "grouping for external references to network, node, link, and TP as defined in RFC8345";
+        container external-ref {
+            description "external references container";
+            list external-ref {
+                key "external-ref-id";
+                description "external refence list";
+                leaf external-ref-id {
+                    type inet:uri;
+                    description "external ref id";
+                }
+                uses dr-rel-common:relation-external-ref-common-attr;
+            }
+        }
+    }
+
+    augment "/nw:networks/nw:network" {
+        uses external-ref-gr;
+        description "augment network with external ref";
+    }
+
+    augment "/nw:networks/nw:network/nw:node" {
+        uses external-ref-gr;
+        description "augment node with external ref";
+    }
+
+    augment "/nw:networks/nw:network/nt:link" {
+        uses external-ref-gr;
+        description "augment link with external ref";
+    }
+
+    augment "/nw:networks/nw:network/nw:node/nt:termination-point" {
+        uses external-ref-gr;
+        description "augment termination point with external ref";
+    }
+
+}

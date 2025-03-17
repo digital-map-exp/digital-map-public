@@ -1,0 +1,88 @@
+module draft-relation-appr-2 {
+
+    yang-version 1.1;
+    namespace "urn:ietf:params:xml:ns:yang:draft-relation-appr-2";
+    prefix "dr-rel-appr-2";
+
+    import draft-relation-common {
+        prefix dr-rel-common;
+        reference
+            "common attributes for relations";
+    }
+
+    import ietf-inet-types {
+        prefix inet;
+        reference
+            "RFC 6991: Common YANG Data Types";
+    }
+
+    import ietf-network {
+        prefix nw;
+        reference
+            "RFC 8345: A YANG Data Model for Network Topologies";
+    }
+
+    import ietf-network-topology {
+        prefix nt;
+        reference
+            "RFC 8345: A YANG Data Model for Network Topologies";
+    }
+
+    organization
+        "INSA Lyon";
+
+    contact
+        "Editor:   Vivekananda Boudia
+        <mailto:vivekananda.boudia@insa-lyon.fr>";
+
+    description
+        "relations external of RFC8345";
+
+    revision 2025-03-09 {
+        description
+            "Initial revision";
+        reference
+            "";
+    }
+
+    container relation {
+        description "relation container";
+        list relation {
+            key "relation-id";
+            description "relation list";
+            leaf relation-id {
+                type inet:uri;
+                description "relation id";
+            }
+            choice network-element-ref{
+                description "linking to RFC8345";
+                leaf network-ref {
+                    type leafref {
+                        path "/nw:networks/nw:network/nw:network-id";
+                    }
+                    description "linking to network";
+                }
+                leaf node-ref {
+                    type leafref {
+                        path "/nw:networks/nw:network/nw:node/nw:node-id";
+                    }
+                    description "linking to node";
+                }
+                leaf link-ref {
+                    type leafref {
+                        path "/nw:networks/nw:network/nt:link/nt:link-id";
+                    }
+                    description "linking to link";
+                }
+                leaf tp-ref {
+                    type leafref {
+                        path "/nw:networks/nw:network/nw:node/nt:termination-point/nt:tp-id";
+                    }
+                    description "linking to termination point";
+                }
+            }
+            uses dr-rel-common:relation-external-ref-common-attr;
+        }
+    }
+
+}

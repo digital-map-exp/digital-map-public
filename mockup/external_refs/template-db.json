@@ -1,0 +1,56 @@
+[
+  {
+    "template-id": "mockup/interface",
+    "description": "mockup: get all of ietf-interface",
+    "template-type": [
+      "CONFIG"
+    ],
+    "parameter": [
+      {
+        "param-id": "int-name",
+        "description": "interface name"
+      }
+    ],
+    "request": [
+      {
+        "request-type": "netconf",
+        "request-builder": {
+          "xpath": "ietf-interfaces:interfaces/ietf-interfaces:interface={int-name}"
+        }
+      },
+      {
+        "request-type": "restconf",
+        "request-builder": {
+          "xpath": "ietf-interfaces:interfaces/ietf-interfaces:interface={int-name}"
+        }
+      }
+    ]
+  },
+  {
+    "template-id": "mockup/interface/statistics",
+    "description": "mockup: get statistics of ietf-interface",
+    "template-type": [
+      "METRIC"
+    ],
+    "parameter": [
+      {
+        "param-id": "int-name",
+        "description": "interface name"
+      }
+    ],
+    "request": [
+      {
+        "request-type": "netconf",
+        "request-builder": {
+          "xpath": "ietf-interfaces:interfaces/:ietf-interfaces:interface={int-name}/ietf-interfaces:statistics"
+        }
+      },
+      {
+        "request-type": "restconf",
+        "request-builder": {
+          "xpath": "ietf-interfaces:interfaces/:ietf-interfaces:interface={int-name}/ietf-interfaces:statistics"
+        }
+      }
+    ]
+  }
+]

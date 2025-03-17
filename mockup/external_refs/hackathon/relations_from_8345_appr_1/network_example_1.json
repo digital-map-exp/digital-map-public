@@ -1,0 +1,161 @@
+{
+  "networks": {
+    "network": [
+      {
+        "network-id": "Network1",
+        "network-types": {},
+        "supporting-network": [],
+        "node": [
+          {
+            "node-id": "Node1",
+            "supporting-node": [],
+            "termination-point": [
+              {
+                "tp-id": "TerminationPoint1",
+                "supporting-termination-point": [],
+                "external-ref": {
+                  "external-ref": [
+                    {
+                      "relation-id": "tpId=TerminationPoint1-templateId=interface-is-enable",
+                      "template-ref": "interface-is-enable",
+                      "request-type-supported": [
+                        "NETCONF-SUBTREE"
+                      ],
+                      "path": "",
+                      "parameter-value": [
+                        {
+                          "param-ref": "interface-name",
+                          "value": "GigabitEthernet0/1/0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "external-ref": {
+              "external-ref": [
+                {
+                  "relation-id": "nodeId=Node1-templateId=isis-configuration",
+                  "template-ref": "isis-configuration",
+                  "request-type-supported": [
+                    "ALL-REQUEST"
+                  ],
+                  "path": "/l3t:l3-node-attributes/isisnt:isis-node-attributes",
+                  "parameter-value": []
+                },
+                {
+                  "relation-id": "tpId=TerminationPoint1-templateId=interface-information",
+                  "template-ref": "interface-information",
+                  "request-type-supported": [
+                    "NETCONF-SUBTREE"
+                  ],
+                  "path": "",
+                  "parameter-value": [
+                    {
+                      "param-ref": "interface-name",
+                      "value": "GigabitEthernet0/1/0"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "node-id": "Node2",
+            "supporting-node": [],
+            "termination-point": [
+              {
+                "tp-id": "TerminationPoint2",
+                "supporting-termination-point": [],
+                "external-ref": {
+                  "external-ref": [
+                    {
+                      "relation-id": "tpId=TerminationPoint2-templateId=interface-is-enable",
+                      "template-ref": "interface-is-enable",
+                      "request-type-supported": [
+                        "ALL-REQUEST"
+                      ],
+                      "path": "",
+                      "parameter-value": [
+                        {
+                          "param-ref": "interface-name",
+                          "value": "GigabitEthernet0/2/0"
+                        }
+                      ]
+                    },
+                    {
+                      "relation-id": "tpId=TerminationPoint2-templateId=interface-information",
+                      "template-ref": "interface-information",
+                      "request-type-supported": [
+                        "ALL-REQUEST"
+                      ],
+                      "path": "",
+                      "parameter-value": [
+                        {
+                          "param-ref": "interface-name",
+                          "value": "GigabitEthernet0/2/0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "external-ref": {
+              "external-ref": [
+                {
+                  "relation-id": "nodeId=Node2-templateId=isis-configuration",
+                  "template-ref": "isis-configuration",
+                  "request-type-supported": [
+                    "ALL-REQUEST"
+                  ],
+                  "path": "/l3t:l3-node-attributes/isisnt:isis-node-attributes",
+                  "parameter-value": []
+                }
+              ]
+            }
+          }
+        ],
+        "link": [
+          {
+            "link-id": "LinkFromNode1ToNode2",
+            "supporting-link": [],
+            "source": {
+              "source-node": "Node1",
+              "source-tp": "TerminationPoint1"
+            },
+            "destination": {
+              "dest-node": "Node2",
+              "dest-tp": "TerminationPoint2"
+            },
+            "external-ref": {
+              "external-ref": [
+              ]
+            }
+          },
+          {
+            "link-id": "LinkFromNode1ToNode2",
+            "supporting-link": [],
+            "source": {
+              "source-node": "Node2",
+              "source-tp": "TerminationPoint2"
+            },
+            "destination": {
+              "dest-node": "Node1",
+              "dest-tp": "TerminationPoint1"
+            },
+            "external-ref": {
+              "external-ref": [
+              ]
+            }
+          }
+        ],
+        "external-ref": {
+          "external-ref": [
+          ]
+        }
+      }
+    ]
+  }
+}

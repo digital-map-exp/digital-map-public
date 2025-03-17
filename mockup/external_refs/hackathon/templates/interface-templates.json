@@ -1,0 +1,76 @@
+{
+  "template": {
+    "template": [
+      {
+        "template-id": "interface-is-enable",
+        "description": "check if an interface is enable",
+        "template-type": {
+          "base": "STATE",
+          "is-historical": false,
+          "extra-label": []
+        },
+        "parameter": [
+          {
+            "param-id": "interface-name",
+            "description": "interface name"
+          }
+        ],
+        "request": [
+          {
+            "request-type": "RESTCONF",
+            "request-builder": {
+              "xpath": "/if:interfaces/if:interface[if:name=\"{interface-name}\"]/if:enabled",
+              "namespace": [
+                {
+                  "prefix": "if",
+                  "namespace": "urn:ietf:params:xml:ns:yang:ietf-interfaces"
+                }
+              ]
+            }
+          },
+          {
+            "request-type": "NETCONF",
+            "request-builder": {
+              "subtree": "<interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\"><interface><name>{interface-name}</name><enabled/></interface></interfaces>"
+            }
+          }
+        ]
+      },
+      {
+        "template-id": "interface-information",
+        "description": "get operational information on a specific interface",
+        "template-type": {
+          "base": "STATE",
+          "is-historical": false,
+          "extra-label": []
+        },
+        "parameter": [
+          {
+            "param-id": "interface-name",
+            "description": "interface name"
+          }
+        ],
+        "request": [
+          {
+            "request-type": "RESTCONF",
+            "request-builder": {
+              "xpath": "/if:interfaces/if:interface[if:name=\"{interface-name}\"]",
+              "namespace": [
+                {
+                  "prefix": "if",
+                  "namespace": "urn:ietf:params:xml:ns:yang:ietf-interfaces"
+                }
+              ]
+            }
+          },
+          {
+            "request-type": "NETCONF",
+            "request-builder": {
+              "subtree": "<interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\"><interface><name>{interface-name}</name></interface></interfaces>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
